@@ -1,0 +1,47 @@
+{
+    "name": "wize-media",
+    "version": "0.1.0",
+    "description": "WizeWorks API for media uploads (images, videos, documents)",
+    "main": "dist/server.js",
+    "type": "commonjs",
+    "scripts": {
+        "dev": "tsx src/server.ts",
+        "build": "tsc",
+        "start": "node dist/server.js",
+        "typecheck": "tsc --noEmit",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "WizeWorks",
+    "license": "MIT",
+    "dependencies": {
+        "@azure/storage-blob": "^12.27.0",
+        "@graphql-tools/merge": "^9.0.24",
+        "@graphql-yoga/node": "^3.9.1",
+        "@sentry/node": "^9.13.0",
+        "@sentry/profiling-node": "^9.13.0",
+        "@wizeworks/graphql-factory-mongo": "^1.24.0",
+        "chalk": "^5.4.1",
+        "cors": "^2.8.5",
+        "dotenv": "^16.5.0",
+        "express": "^5.1.0",
+        "graphql": "^16.10.0",
+        "graphql-scalars": "^1.24.2",
+        "graphql-subscriptions": "^3.0.0",
+        "graphql-tag": "^2.12.6",
+        "graphql-yoga": "^5.13.4",
+        "uuid": "^11.1.0"
+    },
+    "devDependencies": {
+        "@semantic-release/changelog": "^6.0.3",
+        "@semantic-release/git": "^10.0.1",
+        "@semantic-release/github": "^11.0.1",
+        "@types/express": "^5.0.1",
+        "@types/node": "^22.14.1",
+        "nodemon": "^3.1.9",
+        "semantic-release": "^24.2.3",
+        "ts-node": "^10.9.2",
+        "tsx": "^4.19.3",
+        "typescript": "^5.8.3"
+    }
+}
