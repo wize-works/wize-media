@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/wize-works/wize-media/compare/v1.0.0...v1.0.1) (2025-05-01)
+
+
+### Bug Fixes
+
+* Update API ready message to reflect correct project name ([2c55285](https://github.com/wize-works/wize-media/commit/2c55285b420d8a42886a503234353c00dccf4a5b))
+
 # 1.0.0 (2025-04-30)
 
 
