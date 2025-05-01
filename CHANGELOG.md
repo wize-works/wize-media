@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/wize-works/wize-media/compare/v1.0.3...v1.0.4) (2025-05-01)
+
+
+### Bug Fixes
+
+* Update server start log message to include project name ([276db8a](https://github.com/wize-works/wize-media/commit/276db8a19c321993433bf0f37da11aafff530e94))
+
 ## [1.0.3](https://github.com/wize-works/wize-media/compare/v1.0.2...v1.0.3) (2025-05-01)
 
 
