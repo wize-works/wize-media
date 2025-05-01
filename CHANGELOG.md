@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/wize-works/wize-media/compare/v1.0.1...v1.0.2) (2025-05-01)
+
+
+### Bug Fixes
+
+* Update .dockerignore to include additional entries for build output and logs ([e23d30d](https://github.com/wize-works/wize-media/commit/e23d30dfb8ea6587083ff68b0d3f2d9f6fdd415a))
+
 ## [1.0.1](https://github.com/wize-works/wize-media/compare/v1.0.0...v1.0.1) (2025-05-01)
 
 
