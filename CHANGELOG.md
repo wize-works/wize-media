@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/wize-works/wize-media/compare/v1.0.4...v1.0.5) (2025-05-01)
+
+
+### Bug Fixes
+
+* Add Azure storage environment variables to deployment configuration ([4637fea](https://github.com/wize-works/wize-media/commit/4637feabbff85379064b10bd56c01d599bc26990))
+
 ## [1.0.4](https://github.com/wize-works/wize-media/compare/v1.0.3...v1.0.4) (2025-05-01)
 
 
