@@ -81,7 +81,7 @@ const start = async () => {
 
 start()
     .then(() => {
-        logger.info?.('Server started');
+        logger.info?.('Wize Media Server started');
     })
     .catch((error) => {
         logger.error?.('Error starting server:', error);
