@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/wize-works/wize-media/compare/v1.0.2...v1.0.3) (2025-05-01)
+
+
+### Bug Fixes
+
+* Ensure server start logs success and handles errors properly ([9d32896](https://github.com/wize-works/wize-media/commit/9d328965c7e2e772a5edd54becc781206efd7b9e))
+
 ## [1.0.2](https://github.com/wize-works/wize-media/compare/v1.0.1...v1.0.2) (2025-05-01)
 
 
