@@ -1,4 +1,4 @@
-# 📘 WizeExample API
+# 📘 WizeMedia API
 
 [![status](https://img.shields.io/badge/status-active-brightgreen)](https://github.com/wizeworks/wize-wize-media)  
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  

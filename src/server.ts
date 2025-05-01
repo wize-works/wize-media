@@ -74,7 +74,7 @@ const start = async () => {
     logger.error?.('Sentry error handler registered');
     app.listen(port, () => {
         console.log(
-            `🚀 wize-example API ready at http://localhost:${port}/graphql`
+            `🚀 wize-media API ready at http://localhost:${port}/graphql`
         );
     });
 };
