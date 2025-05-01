@@ -79,4 +79,11 @@ const start = async () => {
     });
 };
 
-start();
+start()
+    .then(() => {
+        logger.info?.('Server started');
+    })
+    .catch((error) => {
+        logger.error?.('Error starting server:', error);
+        process.exit(1);
+    });
