@@ -15,6 +15,7 @@ import { makeExecutableSchema } from '@graphql-tools/schema';
 import { uploadTypeDefs } from './graphql/uploadSchema';
 import { uploadResolvers } from './graphql/uploadResolver';
 import { typeDefs } from 'graphql-scalars';
+import { GraphQLSchema } from 'graphql';
 
 const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/';
@@ -37,13 +38,52 @@ const start = async () => {
                     mongoClient,
                     database
                 );
-                const mediaSchemas = makeExecutableSchema({
-                    typeDefs: uploadTypeDefs,
-                    resolvers: uploadResolvers,
-                });
-                currentSchemas = mergeSchemas({
-                    schemas: [factorySchema, mediaSchemas],
-                });
+                let mediaSchemas: GraphQLSchema;
+                try {
+                    // Define a base schema with Query and Mutation types
+                    const baseTypeDefs = `
+                      type Query {
+                        _empty: String
+                      }
+                      
+                      type Mutation {
+                        _empty: String
+                      }
+                    `;
+
+                    console.log("Creating base schema...");
+
+                    // First create a base schema with the types that will be extended
+                    const baseSchema = makeExecutableSchema({
+                        typeDefs: baseTypeDefs
+                    });
+
+                    console.log("Base schema created successfully");
+
+                    // Then create uploadSchema that extends those types
+                    console.log("Creating media schema...");
+                    console.log("Upload typeDefs:", uploadTypeDefs);
+
+                    mediaSchemas = makeExecutableSchema({
+                        typeDefs: [baseTypeDefs, uploadTypeDefs],
+                        resolvers: uploadResolvers,
+                    });
+
+                    console.log("Media schema created successfully");
+                } catch (error) {
+                    console.error("Media schema error:", error);
+                    throw error;
+                }
+                try {
+                    currentSchemas = mergeSchemas({
+                        schemas: [factorySchema, mediaSchemas],
+                    });
+                    console.log("Schemas merged successfully");
+                }
+                catch (error) {
+                    console.error("Error merging schemas:", error);
+                    return;
+                }
             }
             return currentSchemas;
         },
