@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/wize-works/wize-media/compare/v1.1.2...v1.2.0) (2025-05-03)
+
+
+### Features
+
+* Enhance GraphQL schema with project-specific queries for images, videos, and files ([12043ca](https://github.com/wize-works/wize-media/commit/12043ca654df7a5e03abaf67ca8ece7b34e5b0ca))
+
 ## [1.1.2](https://github.com/wize-works/wize-media/compare/v1.1.1...v1.1.2) (2025-05-03)
 
 
