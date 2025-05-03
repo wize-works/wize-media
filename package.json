@@ -20,7 +20,7 @@
         "@graphql-yoga/node": "^3.9.1",
         "@sentry/node": "^9.13.0",
         "@sentry/profiling-node": "^9.13.0",
-        "@wizeworks/graphql-factory-mongo": "^1.24.0",
+        "@wizeworks/graphql-factory-mongo": "^1.25.0",
         "chalk": "^5.4.1",
         "cors": "^2.8.5",
         "dotenv": "^16.5.0",
