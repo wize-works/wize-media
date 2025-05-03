@@ -117,6 +117,10 @@ export const uploadTypeDefs = gql`
     getImages(filter: UploadFilterInput, sort: UploadSortInput, paging: PagingInput): ImagePage!
     getVideos(filter: UploadFilterInput, sort: UploadSortInput, paging: PagingInput): VideoPage!
     getFiles(filter: UploadFilterInput, sort: UploadSortInput, paging: PagingInput): FilePage!
+    
+    getImagesByProject(projectId: ID!): [Image!]!
+    getVideosByProject(projectId: ID!): [Video!]!
+    getFilesByProject(projectId: ID!): [File!]!
   }
 
   extend type Mutation {
