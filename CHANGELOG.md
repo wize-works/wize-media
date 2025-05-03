@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/wize-works/wize-media/compare/v1.1.1...v1.1.2) (2025-05-03)
+
+
+### Bug Fixes
+
+* Update package dependencies for improved stability ([89310ee](https://github.com/wize-works/wize-media/commit/89310ee26d8c9c7a283403b8cb215a8e7d4c7d82))
+
 ## [1.1.1](https://github.com/wize-works/wize-media/compare/v1.1.0...v1.1.1) (2025-05-03)
 
 
