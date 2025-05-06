@@ -110,15 +110,19 @@ jobs:
 
       - name: Install kubelogin
         uses: azure/use-kubelogin@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          kubelogin-version: v0.0.25
         
 
-      - name: Set AKS Context
+      - name: Set AKS Context with admin access
         uses: azure/aks-set-context@v4
         with:
           cluster-name: ${{ secrets.AKS_CLUSTER }}
           resource-group: ${{ secrets.AZURE_RG }}
+	  admin: true
+	  
+      - name: Convert kubeconfig to use Azure CLI token
+        run: kubelogin convert-kubeconfig -l azurecli
 
       - name: Create GitHub deployment
         id: deployment
