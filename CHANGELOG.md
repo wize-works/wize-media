@@ -1,3 +1,16 @@
+# [1.4.0](https://github.com/wize-works/wize-media/compare/v1.3.0...v1.4.0) (2025-05-06)
+
+
+### Bug Fixes
+
+* format deploy.yml for consistent indentation ([367a2af](https://github.com/wize-works/wize-media/commit/367a2af40eb0d7029171b1d7c102013c89cd8d66))
+* update deploy.yml for non-interactive AKS auth ([31e01b3](https://github.com/wize-works/wize-media/commit/31e01b3800a243b7d0e2bf66d59fa57364d1743b))
+
+
+### Features
+
+* Update @wizeworks/graphql-factory-mongo to version 1.31.0 ([8ce46ff](https://github.com/wize-works/wize-media/commit/8ce46ff9b2e3f3b1c80a6f1b61b1dbccab2dc127))
+
 # [1.3.0](https://github.com/wize-works/wize-media/compare/v1.2.0...v1.3.0) (2025-05-04)
 
 
