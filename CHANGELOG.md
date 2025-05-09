@@ -1,3 +1,10 @@
+## [1.5.3](https://github.com/wize-works/wize-media/compare/v1.5.2...v1.5.3) (2025-05-09)
+
+
+### Bug Fixes
+
+* adjust SAS token generation to allow for time skew and improve clarity in return object ([4a5f939](https://github.com/wize-works/wize-media/commit/4a5f9396d9049a26bc7b5cb64d1a20c0061a127f))
+
 ## [1.5.2](https://github.com/wize-works/wize-media/compare/v1.5.1...v1.5.2) (2025-05-09)
 
 
