@@ -27,13 +27,14 @@ export async function generateUploadUrl(type: 'images' | 'videos' | 'files', fil
     const containerClient = blobServiceClient.getContainerClient(type);
     const blobClient = containerClient.getBlockBlobClient(blobName);
 
-    const expiresOn = new Date(Date.now() + 10 * 60 * 1000); // 10 minutes
+    const startsOn = new Date(Date.now() - 2 * 60 * 1000);  // allow 2 min skew
+    const expiresOn = new Date(Date.now() + 10 * 60 * 1000); // valid for 10 min
 
     const sas = generateBlobSASQueryParameters({
         containerName: type,
         blobName,
         permissions: BlobSASPermissions.parse("cw"),
-        startsOn: new Date(),
+        startsOn,
         expiresOn,
         protocol: SASProtocol.Https,
     }, credentials).toString();
@@ -44,6 +45,6 @@ export async function generateUploadUrl(type: 'images' | 'videos' | 'files', fil
     return {
         uploadUrl,
         fileUrl,
-        finalFileName: blobName, // useful for registering later
+        fileName: blobName, // useful for registering later
     };
 }
