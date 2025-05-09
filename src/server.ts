@@ -16,6 +16,7 @@ import { uploadTypeDefs } from './graphql/uploadSchema';
 import { uploadResolvers } from './graphql/uploadResolver';
 import { typeDefs } from 'graphql-scalars';
 import { GraphQLSchema } from 'graphql';
+import { validateSchema } from 'graphql';
 
 const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/';
@@ -79,6 +80,13 @@ const start = async () => {
                         schemas: [factorySchema, mediaSchemas],
                     });
                     console.log("Schemas merged successfully");
+
+                    // Validate the merged schema
+                    const validationErrors = validateSchema(currentSchemas);
+                    if (validationErrors.length > 0) {
+                        console.error("Schema validation errors:", validationErrors);
+                        throw new Error("Schema validation failed");
+                    }
                 }
                 catch (error) {
                     console.error("Error merging schemas:", error);
@@ -95,7 +103,7 @@ const start = async () => {
             };
         },
         graphiql: true,
-        maskedErrors: false,
+        //maskedErrors: false,
         plugins: [useFormattedErrors()],
     });
 
