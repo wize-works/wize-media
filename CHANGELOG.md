@@ -1,3 +1,17 @@
+## [1.5.2](https://github.com/wize-works/wize-media/compare/v1.5.1...v1.5.2) (2025-05-09)
+
+
+### Bug Fixes
+
+* update @wizeworks/graphql-factory-mongo to version 1.33.6 and improve schema validation ([02f76bc](https://github.com/wize-works/wize-media/commit/02f76bcd30634a5d2b5ea1417507c3e211b897cd))
+
+## [1.5.1](https://github.com/wize-works/wize-media/compare/v1.5.0...v1.5.1) (2025-05-09)
+
+
+### Bug Fixes
+
+* update @wizeworks/graphql-factory-mongo to version 1.33.3 ([0ec4484](https://github.com/wize-works/wize-media/commit/0ec44849c397253d19a409dfa9fa86f199d174dc))
+
 # [1.5.0](https://github.com/wize-works/wize-media/compare/v1.4.0...v1.5.0) (2025-05-06)
 
 
