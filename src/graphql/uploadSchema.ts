@@ -15,23 +15,23 @@ export const uploadTypeDefs = gql`
   enum SortDirection {
     asc
     desc
-  } 
+  }
 
   input UploadFilterInput {
     projectId: ID
     uploadedBy: ID
     mimeType: String
   }
-    
+
   input UploadSortInput {
     field: UploadSortField = createdAt
     direction: SortDirection = desc
   }
-  
+
   input PagingInput {
     limit: Int = 20
     offset: Int = 0
-  }  
+  }
 
   input FileInput {
     fileName: String!
@@ -40,19 +40,27 @@ export const uploadTypeDefs = gql`
     uploadedBy: String
     projectId: String
   }
-  
+
   input VideoInput {
     fileName: String!
     mimeType: String!
     url: String!
     uploadedBy: String
     projectId: String
-  } 
+  }
+
+  input ImageInput {
+    fileName: String!
+    mimeType: String!
+    url: String!
+    uploadedBy: String
+    projectId: String
+  }
 
   type UploadUrlResult {
     uploadUrl: String!
     fileUrl: String!
-    fileName: String! # <-- now included
+    fileName: String!
   }
 
   type Image {
@@ -63,14 +71,6 @@ export const uploadTypeDefs = gql`
     uploadedBy: String
     projectId: String
     createdAt: String!
-  }
-
-  input ImageInput {
-    fileName: String!
-    mimeType: String!
-    url: String!
-    uploadedBy: String
-    projectId: String
   }
 
   type Video {
@@ -97,17 +97,17 @@ export const uploadTypeDefs = gql`
     total: Int!
     hasMore: Boolean!
   }
-  
+
   type ImagePage {
     data: [Image!]!
     meta: UploadPageMeta!
   }
-  
+
   type VideoPage {
     data: [Video!]!
     meta: UploadPageMeta!
   }
-  
+
   type FilePage {
     data: [File!]!
     meta: UploadPageMeta!
@@ -117,7 +117,7 @@ export const uploadTypeDefs = gql`
     getImages(filter: UploadFilterInput, sort: UploadSortInput, paging: PagingInput): ImagePage!
     getVideos(filter: UploadFilterInput, sort: UploadSortInput, paging: PagingInput): VideoPage!
     getFiles(filter: UploadFilterInput, sort: UploadSortInput, paging: PagingInput): FilePage!
-    
+
     getImagesByProject(projectId: ID!): [Image!]!
     getVideosByProject(projectId: ID!): [Video!]!
     getFilesByProject(projectId: ID!): [File!]!
